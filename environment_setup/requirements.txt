@@ -1,5 +1,5 @@
-azure-cli==2.22.1
-azureml-sdk[cli]
+azureml-core
+azure-cli
 scikit-learn
 joblib
 numpy
