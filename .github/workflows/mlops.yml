@@ -30,7 +30,6 @@ jobs:
           pip install -r ./environment_setup/requirements.txt
       
       - name: Accessing Azure ML Workspace
-        uses: azure/CLI@v1
-        with:          
-          inlineScript: python ./aml_code/Workspace.py
+        run: |
+          python ./aml_code/Workspace.py
           
