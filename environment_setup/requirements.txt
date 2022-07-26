@@ -1,5 +1,4 @@
 azureml-core
-# --upgrade azureml-core
 azure-cli
 # azureml-sdk
 scikit-learn
