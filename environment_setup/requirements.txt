@@ -1,7 +1,10 @@
 azureml-core
+# --upgrade azureml-core
 azure-cli
+# azureml-sdk
 scikit-learn
 joblib
 numpy
 pandas
 matplotlib
+azureml-dataset-runtime
