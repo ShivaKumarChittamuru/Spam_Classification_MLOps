@@ -2,24 +2,12 @@ name: End-to-end MLOps Build pipeline
 
 on:
   workflow_dispatch:
-    inputs:
-      resource_group:
-        description: 'Resource group name'
-        required: true
-        default: 'MLGroup' 
-        type: string
-      aml_workspace:
-        description: 'Azure Machine Learning workspace name'
-        required: true
-        default: 'ShivaMLservice' 
-        type: string
         
 jobs:
   build:
     runs-on: ubuntu-latest
     
-    steps:
-      
+    steps:      
       - name: Check out repo
         uses: actions/checkout@main
       
@@ -29,12 +17,7 @@ jobs:
       - name: Azure login
         uses: azure/login@v1
         with:
-          creds: ${{secrets.AZURE_CREDENTIALS}}
-      
-      - name: Set Azure ML workspace as default
-        run: |
-          az configure --defaults group="${{ github.event.inputs.resource_group }}"
-          az configure --defaults workspace="${{ github.event.inputs.aml_workspace }}"
+          creds: ${{secrets.AZURE_CREDENTIALS}}      
       
       - name: Use Python Version 3.6
       - uses: actions/setup-python@v2
