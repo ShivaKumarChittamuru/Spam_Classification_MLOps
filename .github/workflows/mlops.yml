@@ -31,7 +31,6 @@ jobs:
       
       - name: Accessing Azure ML Workspace
         uses: azure/CLI@v1
-        with:
-          azcliversion: 2.30.0
+        with:          
           inlineScript: python ./aml_code/Workspace.py
           
