@@ -1,4 +1,4 @@
-name: End-to-end MLOps Build pipeline
+name: Build
 
 # Controls when the workflow will run
 on:
