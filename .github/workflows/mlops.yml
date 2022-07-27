@@ -50,8 +50,4 @@ jobs:
           name: spam-artifact
           path: .
 
-      - name: Download a Build Artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: spam-artifact
-          path: .
+
