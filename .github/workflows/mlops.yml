@@ -50,7 +50,7 @@ jobs:
         with:
           # Artifact name
           name: spam-artifact
-          path: .artifact/
+          path: .
           
   release:
     name: Release Job
@@ -66,16 +66,16 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: spam-artifact
-          path: .artifact/
+          path: .
       
       - name: install python dependencies
-        run: pip install -r .artifact/environment_setup/requirements.txt
+        run: pip install -r ./environment_setup/requirements.txt
 
               # Runs a set of commands using the runners shell
       - name: Deploy to Azure Container Instance
-        run: python .artifact/aml_code/DeployToAci.py
+        run: python ./aml_code/DeployToAci.py
         
       - name: Test ACI Endpoint
-        run: python .artifact/aml_code/AciWebserviceTest.py
+        run: python ./aml_code/AciWebserviceTest.py
           
   
