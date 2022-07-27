@@ -46,7 +46,7 @@ jobs:
         run: python aml_code/RegisterModel.py
         
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.1.0
+        uses: actions/upload-artifact@v3
         with:
           # Artifact name
           name: spam-artifact
@@ -63,7 +63,7 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
      
       - name: Download a Build Artifact
-        uses: actions/download-artifact@v3.0.0
+        uses: actions/download-artifact@v3
         with:
           name: spam-artifact
           path: .artifact/
