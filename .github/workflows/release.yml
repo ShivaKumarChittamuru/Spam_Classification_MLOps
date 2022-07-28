@@ -7,19 +7,16 @@ on:
 jobs:
   # This workflow contains a single job called "release"
   release:
-    # The type of runner that the job will run on
+    name: Release Job
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Log in with Azure
         uses: azure/login@v1
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
      
       - name: Download a Build Artifact
-        uses: actions/download-artifact@v3.0.0
+        uses: actions/download-artifact@v3
         with:
           name: spam-artifact
           path: .
