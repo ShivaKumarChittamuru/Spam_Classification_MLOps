@@ -1,4 +1,4 @@
-# MLOps-Spam-Classification-Hack-Using_GitHub-Actions
+# MLOps-Spam-Classification-Hack-Using-GitHub-Actions
 
 ## About This Repository
 This repository encompasses a "What the Hack" event that teaches participants how to use Azure MLOps tools through a classification use case.It consists of five challenges that break down the steps required to implement an MLOps workflow using GitHub Actions and Azure Machine Learning.
