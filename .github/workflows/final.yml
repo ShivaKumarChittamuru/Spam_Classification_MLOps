@@ -1,4 +1,4 @@
-name: Complete Workflow
+name: Build-Staging-Production
 
 # Controls when the workflow will run
 on:
